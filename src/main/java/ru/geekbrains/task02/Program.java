@@ -14,9 +14,9 @@ public class Program {
         System.out.println(sb);
     }
 
-    private static void printDirectory(File folder, int indent, StringBuilder sb) {
-        sb.append(getIndentString(indent)).append("└─").append(folder.getName()).append("/").append("\n");
-        File[] files = folder.listFiles();
+    private static void printDirectory(File sourceFile, int indent, StringBuilder sb) {
+        sb.append(getIndentString(indent)).append("└─").append(sourceFile.getName()).append("/").append("\n");
+        File[] files = sourceFile.listFiles();
 
         if (files == null){
             return;
